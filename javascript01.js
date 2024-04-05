@@ -9,12 +9,12 @@ const	variableConst="const";//ES6에서 도입, 블록 범위, 상수(constant),
 let camelCase; //카멜케이스 일반적으로 사용
 let snake_case; //스네이크케이스
 let PascalCase; //파스칼케이스
-//자료형
+/*자료형
 
   //기본타입
     //Number	모든 정수 및 부동 소수점 숫자를 포함(매우 큰 정수는 제외)
     //BigInt	매우 큰 정수를 다룰 때 사용합니다. 일반적인 Number 타입으로 표현할 수 없는 크기의 정수를 나타내며, 값 끝에 'n'을 붙여 표기합니다.
-    //String	텍스트 데이터를 저장하는 데 사용됩니다. "",'',``으로 묶음
+    //String	"",'',``으로 묶어 문자열 저장
     //Boolean	논리적 값인 'true'와 'false'
     //Symbol	유일하고 변경 불가능한 기본값으로, 주로 객체의 고유한 속성 키로 사용됩니다. 충돌 방지
     //Undefined	변수가 선언되었으나 아직 값이 할당되지 않았음을 나타냅니다.
@@ -22,11 +22,25 @@ let PascalCase; //파스칼케이스
 
 //복합 타입 (Complex Types)
 
-    //Object	{key:value}키와 값의 쌍으로 구성, (함수, 배열, 날짜 등)을 포함
+    //Object	{key:value}키와 값의 쌍으로 구성, (함수, 배열, 날짜, 내장객체 등을 포함)
+    Object.enrise() : [키,값]을 요소로 하는 배열 반환
+    .keys() : [키]를 요소로 하는 배열 반환
+    .values() : [값]를 요소로 하는 배열 반환
+    .seal(): 객체를 변경할 수 없게 해준다.
+    .is(): 두 값이 같은 지 확인, NaN은 확인불가
+    .assign(): 하나 이상의 소스객체로부터 대상객체로 속성을 복사
+*/
+const target = { a: 1, b: 2 };
+const source = { b: 3, c: 4 };
+const mergedObject = Object.assign({}, target, source);
+console.log("Object.assign():", mergedObject);
+/* 출력: Object.assign(): { a: 1, b: 3, c: 4 }
+
     //Function	객체의 일종으로 취급되어, 함수 내 속성과 메서드를 가짐 
     //Array	[value1,2,...]형태로 구성, 서로 다른 밸류타입 허용, typeof 시 Object, isArray함수로 확인가능
-
-//객체 종류
+    //  concat(), filter(), map(), slice(), sort(), splice(), forEach(), find(), join() , includes(), reduce(), push(),pop()
+*/ 
+    //객체 종류
 
 // 일반 객체:	가장 기본적인 객체 형태, 키-값 쌍을 포함	
 let person = {name: 'Alice', age: 25};

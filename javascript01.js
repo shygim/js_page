@@ -67,6 +67,37 @@ console.log(Number.parseInt('10', 10)); // 10
 
 console.log(globalThis.location.href); // 브라우저 환경
 console.log(globalThis.process.version); // Node.js 환경
+
+
+ //------할당 예제---------------- (할당 - 사용 - 해제(가비지 컬렉터 순) 
+// 기본형 데이터(정수, 문자열) 할당
+const count = 123;  // 정수 할당
+const coffee = "커피";  // 문자열 할당
+
+// 객체 할당 - 객체와 그 속성들을 위한 메모리 할당
+const cafe = { starbucks: 1, ediya: null };
+
+// 배열 할당 - 배열과 그 요소들을 위한 메모리 할당
+const tea = [1, null, "밀크티"];
+
+// 함수 할당 - 함수는 호출 가능한 객체로, 메모리에 할당됨
+function bread(a) {
+  return a + 2;
+}
+
+// 익명 함수 할당 - 이벤트 리스너에서 사용될 익명 함수를 메모리에 할당
+someElement.addEventListener(
+  "click",
+  () => { someElement.style.backgroundColor = "blue"; },
+  false
+);
+
+// Date 객체 할당 - Date 객체 인스턴스를 위한 메모리 할당
+const studyDay = new Date();
+
+// DOM 엘리먼트 할당 - 새로운 div 엘리먼트를 생성하고 메모리에 할당
+const selectDiv = document.createElement("div");
+
 //함수
 
 

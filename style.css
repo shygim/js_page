@@ -1,1 +1,5 @@
+@import "./styles/reset.css";
+
+/*초기화 후 적용 */
+
 .b {color: blue; }

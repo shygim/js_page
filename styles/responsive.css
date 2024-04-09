@@ -1,5 +1,29 @@
 @import "./reset.css"; 
 /* 초기화 */
+/*id접근은 샵*/
+#hamburger {display: none; cursor:pointer}
+#closeMenu {display: none;}
+
+
+main {background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width:1300px;
+}
+main div {width:260px;
+          height: 300px;
+          background-color: gray;
+          display: flex;
+          padding: 40px 20px;
+          padding-top: 50px;
+          margin: 40px 0px;
+          font-size: 2rem;
+          justify-content: center;
+}
+
+
 
 header {background-color: "white";
   width: 100%;
@@ -8,6 +32,7 @@ header {background-color: "white";
   padding: 16px 32px;
   background-color: aqua;
   gap: 1px;
+  max-width:1300px;
 }
 
 
@@ -22,16 +47,37 @@ header ul li a:hover {color: red}
 
 
 @media(max-width:1400px) {
-  header {background-color: "white";
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 32px;
-    background-color: aqua;
+  header {max-width: 1400px;
   }
 }
 
 @media(max-width:960px) {
-  body {padding: 0 8px; overflow: auto;
+  body {padding: 20px 100px; overflow: auto;
+  }
+}
+
+/*360이하인 경우 설정*/
+
+@media (max-width: 360px) {
+header {
+  
+  position: fixed;
+  top: 0px;
+
+}
+
+  #hamburger {display: flex;}
+  header ul {display: none;
+    /* display: flex; */
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    place-content: center;
+    width: 100%;
+    height: 100vh; 
+    #closeMenu {display: flex;}
   }
 }

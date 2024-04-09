@@ -12,17 +12,62 @@
 
 <header>
   <a href="../index.html">메인</a>
-  <ul>
+  <p id="hamburger">햄버거메뉴</p>>  
+  <ul id="verticalMenu">
     <li><a href="tag.html">태그</a></li>
     <li><a href="./event.html">이벤트</a></li>
     <li><a href="./form.html">폼</a></li>
     <li><a href="./components.html">컴포넌트</a></li>
     <li><a href="./responsive.html">반응형</a></li>
     <li><a href="./openapi.html">openAPI</a></li>
+    <li><button id="closeMenu">닫기</button></li>
 
   
   </ul>
 </header>
+
+<main>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+
+</main>
+
+
+
+
+<script>
+  let menu= document.getElementById("hamburger");
+  menu.addEventListener("click", function(){
+    nav.style.display = "flex";
+  })
+  
+
+
+
+  let nav = document.getElementById("verticalMenu")
+  closeMenu.addEventListener("click", function(){
+    nav.style.display = "none";
+  })
+
+  window.addEventListener("resize", function(){
+    if (window.innerWidth>360) {
+      nav.style.display = "flex";
+    }
+    else {
+      nav.style.display = "none";
+    }
+  })
+
+  
+</script>
 
 
 
